@@ -23,7 +23,7 @@ Next, you need to install the required dependencies to work with WordPress. Run 
 ```bash
 npm install --save isomorphic-fetch
 npm install --save node-fetch
-npm install --save wordpress-url
+npm install @wordpress/url --save
 ```
 These packages will allow you to fetch data from your WordPress website.
 
