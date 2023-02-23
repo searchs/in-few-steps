@@ -1,13 +1,17 @@
 # Searches a SQLite3 database using first name, last name, or birth date
 
 Start by importing the necessary libraries:
+
 ```python
 import sqlite3
 ```
+
 Connect to the SQLite3 database:
+
 ```python
 conn = sqlite3.connect('user_database.db')
 ```
+
 Create a cursor object to execute SQL commands:
 
 ```python
@@ -15,6 +19,7 @@ cursor = conn.cursor()
 ```
 
 Create a table to store user information:
+
 ```python
 cursor.execute('''
 CREATE TABLE users (
@@ -28,17 +33,20 @@ CREATE TABLE users (
 ```
 
 Insert some data into the table:
+
 ```python
 cursor.execute("INSERT INTO users (first_name, last_name, birth_date) VALUES ('John', 'Doe', '1990-01-01',1)")
 cursor.execute("INSERT INTO users (first_name, last_name, birth_date) VALUES ('Jane', 'Doe', '1995-05-05',0)")
 ```
 
 Commit the changes to the database:
+
 ```python
 conn.commit()
 ```
 
 Define a function to search for users based on first name, last name, or birth date:
+
 ```python
 def search_user(first_name=None, last_name=None, birth_date=None):
     query = "SELECT * FROM users WHERE 1=1"
@@ -51,6 +59,7 @@ def search_user(first_name=None, last_name=None, birth_date=None):
     cursor.execute(query)
     return cursor.fetchall()
 ```
+
 Call the search_user function with different parameters to search for users in the database:
 
 ```python
