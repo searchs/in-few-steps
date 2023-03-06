@@ -25,7 +25,10 @@ This uploads the employees.csv file to the /user/hive/warehouse/ directory on HD
 To create a table using the CSV file, we use the CREATE TABLE statement with the STORED AS TEXTFILE clause. Let's create a table named employees with the following schema:
 
 ```sql
-id INT, name STRING, age INT, salary FLOAT
+id INT,
+name STRING, 
+age INT,
+salary FLOAT
 ```
 
 To create the table, run the following command in the Impala Shell:
